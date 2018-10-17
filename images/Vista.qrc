@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="logos">
+    <file>vista4f_logo.png</file>
+    <file>Logo_gruenschwarz_RGB_04.jpg</file>
+  </qresource>
+</RCC>
