@@ -15,8 +15,12 @@ button hold the right mouse key and left click the button you want.
 Further the player sends OSC commands when a player starts playing and when the 
 user clicked the stop, ring, hangup or reset button.
 
+Prerequisites:
+------------
+1. Install Python (version 3.6 or later): https://www.python.org/downloads/
+2. Run setup.bat (installs sounddevice, soundfile, PyQT5, python-osc)
 
-Quick start:
+Quick start (for Windows):
 ------------
 1. Start 'DialogueRun.bat'
 2. Choose an ASIO soundcard
@@ -30,6 +34,16 @@ Quick start:
 - The main window shows up:
 7. Click the buttons with the messages you want and build a dialogue
 8. Click 'Quit' to close the DialogueSamplePlayer.
+
+Usage without ASIO soundcard:
+------------
+* Download and install ASIO4ALL http://www.asio4all.org/ and restart PC.
+* Set the channels to either 2 or 1. Don't mix.
+
+Local usage without OSC
+------------
+Enter 127.0.0.1 as network address.
+
 
 Special buttons:
 ----------------
