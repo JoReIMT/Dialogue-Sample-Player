@@ -19,7 +19,6 @@
 import sys
 from os import path,system
 import argparse
-#import numpy as np
 import sounddevice as sd                # MIT
 import soundfile as sf                  # BSD 3-Clause
 from PyQt5 import QtWidgets, QtCore     # GPLv3 <http://www.gnu.org/licenses/>
