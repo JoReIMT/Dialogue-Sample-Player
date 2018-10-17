@@ -191,11 +191,6 @@ class Sampler(QtWidgets.QMainWindow):
             client.send_message(playABC[pl-1],len(data)/samplerate*1000)
             # play the sound
             sd.play(data, samplerate, mapping=[ch[pl-1]])
-#            if pl == 1:
-#                sd1.start()
-#                sd1.write(np.float32(data))
-            #sd.get_stream().active
-    
     
     def colorRST(self):
         """
