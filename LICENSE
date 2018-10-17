@@ -1,3 +1,15 @@
+GENERAL
+-------
+
+The Dialogue Sample Player is desinged to play samples for a dialog of 
+three persons and sends related OSC-messages. Therefore it uses several 
+packages to play the sound, send OSC-messages and build the GUI. 
+The GUI is build with Qt. That is the reason why it needs to use the GPL.
+
+
+------------------------------------------------------------------------
+
+
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
