@@ -4,9 +4,10 @@ What is DialogueSamplePlayer:
 -----------------------------
 
 This is a player desinged to play samples for a dialogue of three persons.
-Therfore the buttons are ordered in an table with three columns.
-Each of the columns represents one person. For each person the player chooses 
-one output channel.
+Therfore the buttons are ordered in an table with three columns. Each of the 
+columns represents one person. For each person the player chooses one output 
+channel.
+
 The Dialogue Sample Player markes the played samples with bluish green color.
 To reset the color of all buttons press 'Reset' or if you just want to reset one
 button hold the right mouse key and left click the button you want.
@@ -35,8 +36,11 @@ Special buttons:
 ----------------
 
 'Stop'		- Stops the current playback and sends OSC message 'Stop'
+
 'Ring'		- Send an OSC message to trigger en external ringing sound
+
 'Hangup'	- Stops the current playback and sends OSC message 'Hangup'
+
 'Reset'		- Reset the color of all buttons and sends OSC message 'Reset'
 
 If you want to reset only one button hold the right mouse key and left click 
