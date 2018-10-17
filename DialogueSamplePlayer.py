@@ -19,6 +19,7 @@
 import sys
 from os import path,system
 import argparse
+#import numpy as np
 import sounddevice as sd                # MIT
 import soundfile as sf                  # BSD 3-Clause
 from PyQt5 import QtWidgets, QtCore     # GPLv3 <http://www.gnu.org/licenses/>
@@ -301,10 +302,28 @@ def run():
     
     # set sounddevice
     sd.default.device = dialog.comboBox.currentText() #'ASIO Hammerfall DSP'
-
+#    asio_out = sd.AsioSettings(channel_selectors=[0,1,2])
+#    sd.default.extra_settings = asio_out
     global ch
     ch = [int(dialog.comboBox_4.currentText()),int(dialog.comboBox_3.currentText()), \
         int(dialog.comboBox_2.currentText())]
+    
+    # initalize sounddevice streams
+#    global sd1,sd2,sd3
+#    data, samplerate = sf.read(path.abspath('stille.wav'))
+#    asio_out = sd.AsioSettings(channel_selectors=[0,1,2])
+#    sd.play(data, samplerate, extra_settings=asio_out)
+#    sd.OutputStream(device = sd.default.device,extra_settings=asio_out, channels=1).start()
+#    sd1 = sd.get_stream()
+#    outdata[:,1] = np.float32(data)
+#    sd.OutputStream(extra_settings=asio_out, channels=1).write(outdata)
+#    
+#    asio_out = sd.AsioSettings(channel_selectors=[1])
+#    sd.play(data, samplerate, extra_settings=asio_out)
+#    sd2 = sd.get_stream()
+#    asio_out = sd.AsioSettings(channel_selectors=[2])
+#    sd.play(data, samplerate, extra_settings=asio_out)
+#    sd3 = sd.get_stream()
     
     # start sampler UI
     widget = Sampler()
