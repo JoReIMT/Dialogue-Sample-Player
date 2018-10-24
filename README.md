@@ -25,25 +25,38 @@ Quick start (for Windows):
 1. Start 'DialogueRun.bat'
 2. Choose an ASIO soundcard
 3. Choose output channels (Player1-3)
-- OSC if needed:
+* OSC if needed:
 4. Set 'Network address' 
-	- ('Test IP' button sends a ping and shows if IP address is OK)
+	* ('Test IP' button sends a ping and shows if IP address is OK)
 5. Set 'OSC port'
-- If all is okay:
+* If all is okay:
 6. Click 'OK'
-- The main window shows up:
+* The main window shows up:
 7. Click the buttons with the messages you want and build a dialogue
 8. Click 'Quit' to close the DialogueSamplePlayer.
 
 Usage without ASIO soundcard:
 ------------
 * Download and install ASIO4ALL http://www.asio4all.org/ and restart PC.
-* Set the channels to either 2 or 1. Don't mix.
+* Choose ASIO4ALL as sounddevice and set the channels.
+* If you just own a stereo-soundcard you can select only channel 1 or 2.
 
-Local usage without OSC
+Usage without OSC
 ------------
-Enter 127.0.0.1 as network address.
+* There is no need to change or enter a network address.
+* The OSC data will be sent to Nirvana.
 
+Usage with OSC
+------------
+* For local usage:
+	* Enter 127.0.0.1 as network address.
+	* Enter OSC port.
+* For network usage:
+	* Enter the network address of the receiver.
+	* Enter OSC port.
+* You can test whether the IP address is reachable by clicking the 'Test IP' 
+  button 
+	* that will send a ping and show if the IP address is OK
 
 Special buttons:
 ----------------
