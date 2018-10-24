@@ -203,7 +203,7 @@ class Sampler(QtWidgets.QMainWindow):
         To reset the colors of the buttons
         """
         self.pushButton.setStyleSheet("background-color: rgb(220,220,220)")
-        for i in range(72,1,-1):
+        for i in range(92,1,-1):
             getattr(self, 'pushButton_%d' %i).setStyleSheet\
                                      ("background-color: rgb(220,220,220)")
 
