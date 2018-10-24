@@ -38,7 +38,8 @@ Quick start (for Windows):
 Usage without ASIO soundcard:
 ------------
 * Download and install ASIO4ALL http://www.asio4all.org/ and restart PC.
-* Set the channels to either 2 or 1. Don't mix.
+* Choose ASIO4ALL as sounddevice and set the channels.
+* If you just own a stereo-soundcard you can select only channel 1 or 2.
 
 Local usage without OSC
 ------------
