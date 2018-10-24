@@ -2,7 +2,6 @@
 
 What is DialogueSamplePlayer:
 -----------------------------
-
 This is a player desinged to play samples for a dialogue of three persons.
 Therfore the buttons are ordered in an table with three columns. Each of the 
 columns represents one person. For each person the player chooses one output 
@@ -41,14 +40,25 @@ Usage without ASIO soundcard:
 * Choose ASIO4ALL as sounddevice and set the channels.
 * If you just own a stereo-soundcard you can select only channel 1 or 2.
 
-Local usage without OSC
+Usage without OSC
 ------------
-Enter 127.0.0.1 as network address.
+* There is no need to change or enter a network address.
+* The OSC data will be sent to Nirvana.
 
+Usage with OSC
+------------
+* For local usage:
+	* Enter 127.0.0.1 as network address.
+	* Enter OSC port.
+* For network usage:
+	* Enter the network address of the receiver.
+	* Enter OSC port.
+* You can test whether the IP address is reachable by clicking the 'Test IP' 
+  button 
+	* that will send a ping and show if the IP address is OK
 
 Special buttons:
 ----------------
-
 'Stop'		- Stops the current playback and sends OSC message 'Stop'
 
 'Ring'		- Send an OSC message to trigger en external ringing sound
@@ -60,10 +70,8 @@ Special buttons:
 If you want to reset only one button hold the right mouse key and left click 
 the button you want.
 
-
 OSC commands out: 
 -----------------
-
     Player start: 
         Adress: 'A','B','C'
         Data:   <length of sample in milliseconds>
@@ -79,7 +87,6 @@ OSC commands out:
     Reset clicked:
         Adress: 'Reset'
         Data:   0
-
 
 TODO:
 ----- 
