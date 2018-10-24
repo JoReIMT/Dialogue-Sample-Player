@@ -50,8 +50,13 @@ Usage with OSC
 ------------
 * For local usage:
 	* Enter 127.0.0.1 as network address.
+	* Enter OSC port.
 * For network usage:
 	* Enter the network address of the receiver.
+	* Enter OSC port.
+* You can test whether the IP address is reachable by clicking the 'Test IP' 
+  button 
+	* that will send a ping and show if the IP address is OK
 
 Special buttons:
 ----------------
