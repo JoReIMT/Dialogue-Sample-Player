@@ -24,13 +24,13 @@ Quick start (for Windows):
 1. Start 'DialogueRun.bat'
 2. Choose an ASIO soundcard
 3. Choose output channels (Player1-3)
-- OSC if needed:
+* OSC if needed:
 4. Set 'Network address' 
-	- ('Test IP' button sends a ping and shows if IP address is OK)
+	* ('Test IP' button sends a ping and shows if IP address is OK)
 5. Set 'OSC port'
-- If all is okay:
+* If all is okay:
 6. Click 'OK'
-- The main window shows up:
+* The main window shows up:
 7. Click the buttons with the messages you want and build a dialogue
 8. Click 'Quit' to close the DialogueSamplePlayer.
 
@@ -90,7 +90,7 @@ OSC commands out:
 
 TODO:
 ----- 
-	- Playing parallel
+	* Playing parallel
 
 
 
