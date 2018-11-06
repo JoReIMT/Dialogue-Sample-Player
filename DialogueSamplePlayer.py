@@ -69,7 +69,7 @@ class Sampler(QtWidgets.QMainWindow):
         loadUi(path.abspath('DialogueSampler.ui'),self)
         self.setWindowTitle('Dialogue Sample Player')
         self.colorRST()
-        self.frame.setStyleSheet("background-color: white")
+        #self.frame.setStyleSheet("background-color: white")
         self.ButtonActions()
 
     def ButtonActions(self):
@@ -259,9 +259,9 @@ class Sampler(QtWidgets.QMainWindow):
         P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87,36,\
                     84,39,43,65] #44,51
         P3 = [22,50,37,41,57]
-        for i in range(92,1,-1):
-            getattr(self, 'pushButton_%d' %i).setStyleSheet\
-                                     ("background-color: rgb(220,220,220)")
+#        for i in range(92,1,-1):
+#            getattr(self, 'pushButton_%d' %i).setStyleSheet\
+#                                     ("background-color: rgb(220,220,220)")
         for i in P1:
             getattr(self, 'pushButton_%d' %i).setStyleSheet\
                                      ("background-color: rgb(210,190,255)")
