@@ -184,7 +184,17 @@ class Sampler(QtWidgets.QMainWindow):
             (2, path.abspath(path_2+'Okay(zustimmend)'+suffix_2)))
         self.pushButton_87.clicked.connect(lambda: self.player \
             (2, path.abspath(path_2+'mmmh(nachfragend)'+suffix_2)))
-        
+        self.pushButton_36.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'Damn'+suffix_2)))
+        self.pushButton_84.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'Damn(kurz)'+suffix_2)))
+        self.pushButton_39.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'Kack'+suffix_2)))
+        self.pushButton_43.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'ou fuck'+suffix_2)))
+        self.pushButton_65.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'Uhm'+suffix_2)))
+		
         #Person3
         path_3 = 'Person3_200-7000Hz_3rd-order\\'
         suffix_3 = '_200-7000Hz.wav'
@@ -210,7 +220,8 @@ class Sampler(QtWidgets.QMainWindow):
         if QtWidgets.QApplication.mouseButtons() & QtCore.Qt.RightButton:
             P1 = [1,2,3,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
                     38,35,42,63,69] #28,40
-            P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87] #44,51
+            P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87,36,\
+                    84,39,43,65] #44,51
             P3 = [22,50,37,41,57]
             # reset the color
             bgc = ['rgb(210,190,255)','rgb(170,255,255)','rgb(255,255,150)','rgb(220,220,220)']
@@ -245,7 +256,8 @@ class Sampler(QtWidgets.QMainWindow):
         """
         P1 = [1,2,3,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
                     38,35,42,63,69] #28,40
-        P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87] #44,51
+        P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87,36,\
+                    84,39,43,65] #44,51
         P3 = [22,50,37,41,57]
         for i in range(92,1,-1):
             getattr(self, 'pushButton_%d' %i).setStyleSheet\

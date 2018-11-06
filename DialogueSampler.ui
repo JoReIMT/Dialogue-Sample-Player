@@ -110,9 +110,9 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-337</y>
-         <width>813</width>
-         <height>1009</height>
+         <y>-598</y>
+         <width>804</width>
+         <height>1241</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
@@ -445,7 +445,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string/>
+           <string>Damn</string>
           </property>
          </widget>
         </item>
@@ -575,7 +575,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string/>
+           <string>Kack</string>
           </property>
          </widget>
         </item>
@@ -1069,7 +1069,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string/>
+           <string>Damn(Kurz)</string>
           </property>
          </widget>
         </item>
@@ -1108,7 +1108,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string/>
+           <string>Uhm</string>
           </property>
          </widget>
         </item>
@@ -1121,7 +1121,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string/>
+           <string>ou fuck</string>
           </property>
          </widget>
         </item>
@@ -1267,7 +1267,7 @@
      <x>0</x>
      <y>0</y>
      <width>850</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
