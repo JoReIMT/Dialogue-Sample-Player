@@ -90,7 +90,7 @@ class Sampler(QtWidgets.QMainWindow):
         # Person1
         path_1 = 'Person1_200-7000Hz_3rd-order\\'
         suffix_1 = '_200-7000Hz.wav'
-        self.pushButton.clicked.connect(lambda: self.player \
+        self.pushButton_1.clicked.connect(lambda: self.player \
             (1, path.abspath(path_1+'Guten Tag'+suffix_1)))
         self.pushButton_2.clicked.connect(lambda: self.player \
             (1, path.abspath(path_1+'Sie haben uns wegen eines Praktikums'+suffix_1)))
@@ -102,10 +102,28 @@ class Sampler(QtWidgets.QMainWindow):
             (1, path.abspath(path_1+'Mehr erfahren'+suffix_1)))
         self.pushButton_19.clicked.connect(lambda: self.player \
             (1, path.abspath(path_1+'Oh warum denn nicht'+suffix_1)))
-        self.pushButton_28.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Welchen Beruf'+suffix_1)))
+        self.pushButton_20.clicked.connect(lambda: self.player \
+            (1, path.abspath(path_1+'Joar(gemütlich)'+suffix_1)))
+        self.pushButton_21.clicked.connect(lambda: self.player \
+            (1, path.abspath(path_1+'Joa(Kurz)'+suffix_1)))
+        self.pushButton_18.clicked.connect(lambda: self.player \
+            (1, path.abspath(path_1+'Ja'+suffix_1)))
+        self.pushButton_24.clicked.connect(lambda: self.player \
+            (1, path.abspath(path_1+'Ja genau'+suffix_1)))
+        self.pushButton_31.clicked.connect(lambda: self.player \
+            (1, path.abspath(path_1+'Inst_thermodyn'+suffix_1)))
+        self.pushButton_33.clicked.connect(lambda: self.player \
+            (1, path.abspath(path_1+'Das stimmt'+suffix_1)))
+        self.pushButton_80.clicked.connect(lambda: self.player \
+            (1, path.abspath(path_1+'hmhm(zustimmend)'+suffix_1)))
         self.pushButton_40.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Was interessiert beruf'+suffix_1)))
+            (1, path.abspath(path_1+'hmm(zustimmend)'+suffix_1)))
+        self.pushButton_28.clicked.connect(lambda: self.player \
+            (1, path.abspath(path_1+'imhm'+suffix_1)))
+        self.pushButton_83.clicked.connect(lambda: self.player \
+            (1, path.abspath(path_1+'Aha(gelangweilt)'+suffix_1)))
+        self.pushButton_86.clicked.connect(lambda: self.player \
+            (1, path.abspath(path_1+'Okay'+suffix_1)))
         self.pushButton_56.clicked.connect(lambda: self.player \
             (1, path.abspath(path_1+'Okay das reicht'+suffix_1)))
         self.pushButton_48.clicked.connect(lambda: self.player \
@@ -140,10 +158,6 @@ class Sampler(QtWidgets.QMainWindow):
             (2, path.abspath(path_2+'Machen'+suffix_2)))
         self.pushButton_45.clicked.connect(lambda: self.player \
             (2, path.abspath(path_2+'Job'+suffix_2)))
-        self.pushButton_51.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Erwartung'+suffix_2)))
-        self.pushButton_44.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Organisieren'+suffix_2)))
         self.pushButton_46.clicked.connect(lambda: self.player \
             (2, path.abspath(path_2+'Charakter'+suffix_2)))
         self.pushButton_52.clicked.connect(lambda: self.player \
@@ -156,6 +170,20 @@ class Sampler(QtWidgets.QMainWindow):
             (2, path.abspath(path_2+'Sehrgut'+suffix_2)))
         self.pushButton_64.clicked.connect(lambda: self.player \
             (2, path.abspath(path_2+'Zurück'+suffix_2)))
+        self.pushButton_78.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'Frage wiederholen'+suffix_2)))
+        self.pushButton_79.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'Sind Sie noch da'+suffix_2)))
+        self.pushButton_81.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'mhm'+suffix_2)))
+        self.pushButton_58.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'mhm(zustimmend)'+suffix_2)))
+        self.pushButton_85.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'Oh wirklich'+suffix_2)))
+        self.pushButton_90.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'Okay(zustimmend)'+suffix_2)))
+        self.pushButton_87.clicked.connect(lambda: self.player \
+            (2, path.abspath(path_2+'mmmh(nachfragend)'+suffix_2)))
         
         #Person3
         path_3 = 'Person3_200-7000Hz_3rd-order\\'
@@ -180,8 +208,21 @@ class Sampler(QtWidgets.QMainWindow):
         file:   - the absolute file path
         """
         if QtWidgets.QApplication.mouseButtons() & QtCore.Qt.RightButton:
+            P1 = [1,2,3,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
+                    38,35,42,63,69] #28,40
+            P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87] #44,51
+            P3 = [22,50,37,41,57]
             # reset the color
-            self.sender().setStyleSheet("background-color: rgb(220,220,220)")
+            bgc = ['rgb(210,190,255)','rgb(170,255,255)','rgb(255,255,150)','rgb(220,220,220)']
+            button_pressed = int(self.sender().objectName()[11:])
+            if button_pressed in P1:
+                self.sender().setStyleSheet("background-color: "+bgc[0])
+            elif button_pressed in P2:
+                self.sender().setStyleSheet("background-color: "+bgc[1])
+            elif button_pressed in P3:
+                self.sender().setStyleSheet("background-color: "+bgc[2])
+            else:
+                self.sender().setStyleSheet("background-color: "+bgc[3])
         else:
             # set the color
             self.sender().setStyleSheet("background-color: rgb(0,200,180)")
@@ -202,10 +243,22 @@ class Sampler(QtWidgets.QMainWindow):
         """
         To reset the colors of the buttons
         """
-        self.pushButton.setStyleSheet("background-color: rgb(220,220,220)")
+        P1 = [1,2,3,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
+                    38,35,42,63,69] #28,40
+        P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87] #44,51
+        P3 = [22,50,37,41,57]
         for i in range(92,1,-1):
             getattr(self, 'pushButton_%d' %i).setStyleSheet\
                                      ("background-color: rgb(220,220,220)")
+        for i in P1:
+            getattr(self, 'pushButton_%d' %i).setStyleSheet\
+                                     ("background-color: rgb(210,190,255)")
+        for i in P2:
+            getattr(self, 'pushButton_%d' %i).setStyleSheet\
+                                     ("background-color: rgb(170,255,255)")
+        for i in P3:
+            getattr(self, 'pushButton_%d' %i).setStyleSheet\
+                                     ("background-color: rgb(255,255,150)")
 
 
 class SoundDev(QtWidgets.QDialog):
