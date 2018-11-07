@@ -87,134 +87,143 @@ class Sampler(QtWidgets.QMainWindow):
         self.pushButton_76.clicked.connect(lambda: (sd.stop(), \
             client.send_message("Hangup",0))) # Hangup #
         
+        #Volume sliders
+        self.label_3.setText(str(self.horizontalSlider_1.value()))
+        self.horizontalSlider_1.valueChanged.connect(lambda: self.label_3.\
+                setText(str(self.horizontalSlider_1.value())))
+        self.label_4.setText(str(self.horizontalSlider_2.value()))
+        self.horizontalSlider_2.valueChanged.connect(lambda: self.label_4.\
+                setText(str(self.horizontalSlider_2.value())))
+        
         # Person1
         path_1 = 'Person1_200-7000Hz_3rd-order\\'
         suffix_1 = '_200-7000Hz.wav'
         self.pushButton_1.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Guten Tag'+suffix_1)))
+            (1, self.vol_m()*1, path.abspath(path_1+'Guten Tag'+suffix_1)))
         self.pushButton_2.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Sie haben uns wegen eines Praktikums'+suffix_1)))
+            (1, self.vol_m()*0.8, path.abspath(path_1+'Sie haben uns wegen eines Praktikums'+suffix_1)))
         self.pushButton_3.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Auf der Zweiten Leitung'+suffix_1)))
+            (1, self.vol_m()*1, path.abspath(path_1+'Auf der Zweiten Leitung'+suffix_1)))
         self.pushButton_13.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Und dann ist noch unser Projektleiter zugeschaltet'+suffix_1)))
+            (1, self.vol_m()*1, path.abspath(path_1+'Und dann ist noch unser Projektleiter zugeschaltet'+suffix_1)))
         self.pushButton_30.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Mehr erfahren'+suffix_1)))
+            (1, self.vol_m()*1, path.abspath(path_1+'Mehr erfahren'+suffix_1)))
         self.pushButton_19.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Oh warum denn nicht'+suffix_1)))
+            (1, self.vol_m()*0.8, path.abspath(path_1+'Oh warum denn nicht'+suffix_1)))
         self.pushButton_20.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Joar(gemütlich)'+suffix_1)))
+            (1, self.vol_u()*0.8, path.abspath(path_1+'Joar(gemütlich)'+suffix_1)))
         self.pushButton_21.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Joa(Kurz)'+suffix_1)))
+            (1, self.vol_u()*0.75, path.abspath(path_1+'Joa(Kurz)'+suffix_1)))
         self.pushButton_18.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Ja'+suffix_1)))
+            (1, self.vol_u()*0.65, path.abspath(path_1+'Ja'+suffix_1)))
         self.pushButton_24.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Ja genau'+suffix_1)))
+            (1, self.vol_u()*1, path.abspath(path_1+'Ja genau'+suffix_1)))
         self.pushButton_31.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Inst_thermodyn'+suffix_1)))
+            (1, self.vol_u()*1, path.abspath(path_1+'Inst_thermodyn'+suffix_1)))
         self.pushButton_33.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Das stimmt'+suffix_1)))
+            (1, self.vol_u()*0.8, path.abspath(path_1+'Das stimmt'+suffix_1)))
         self.pushButton_80.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'hmhm(zustimmend)'+suffix_1)))
+            (1, self.vol_u()*0.3, path.abspath(path_1+'hmhm(zustimmend)'+suffix_1)))
         self.pushButton_40.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'hmm(zustimmend)'+suffix_1)))
+            (1, self.vol_u()*0.3, path.abspath(path_1+'hmm(zustimmend)'+suffix_1)))
         self.pushButton_28.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'imhm'+suffix_1)))
+            (1, self.vol_u()*0.3, path.abspath(path_1+'imhm'+suffix_1)))
         self.pushButton_83.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Aha(gelangweilt)'+suffix_1)))
+            (1, self.vol_u()*0.6, path.abspath(path_1+'Aha(gelangweilt)'+suffix_1)))
         self.pushButton_86.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Okay'+suffix_1)))
+            (1, self.vol_u()*0.65, path.abspath(path_1+'Okay'+suffix_1)))
         self.pushButton_56.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Okay das reicht'+suffix_1)))
+            (1, self.vol_u()*1, path.abspath(path_1+'Okay das reicht'+suffix_1)))
         self.pushButton_48.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Danke schön'+suffix_1)))
+            (1, self.vol_u()*1, path.abspath(path_1+'Danke schön'+suffix_1)))
         self.pushButton_55.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Unterschied gut aussergewoehnlich'+suffix_1)))
+            (1, self.vol_m()*1, path.abspath(path_1+'Unterschied gut aussergewoehnlich'+suffix_1)))
         self.pushButton_32.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Angst'+suffix_1)))
+            (1, self.vol_m()*0.85, path.abspath(path_1+'Angst'+suffix_1)))
         self.pushButton_38.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Umziehen'+suffix_1)))
+            (1, self.vol_m()*1, path.abspath(path_1+'Umziehen'+suffix_1)))
         self.pushButton_35.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Freizeit'+suffix_1)))
+            (1, self.vol_m()*1, path.abspath(path_1+'Freizeit'+suffix_1)))
         self.pushButton_42.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Danke soweit'+suffix_1)))
+            (1, self.vol_m()*1, path.abspath(path_1+'Danke soweit'+suffix_1)))
         self.pushButton_63.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Danke gespraech'+suffix_1)))
+            (1, self.vol_m()*1, path.abspath(path_1+'Danke gespraech'+suffix_1)))
         self.pushButton_69.clicked.connect(lambda: self.player \
-            (1, path.abspath(path_1+'Aufwiederhoeren'+suffix_1)))
+            (1, self.vol_m()*1, path.abspath(path_1+'Aufwiederhoeren'+suffix_1)))
         
         # Person2
         path_2 = 'Person2_200-7000Hz_3rd-order\\'
         suffix_2 = '_200-7000Hz.wav'
         self.pushButton_11.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Hallo'+suffix_2)))
+            (2, self.vol_m()*1, path.abspath(path_2+'Hallo'+suffix_2)))
         self.pushButton_27.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Anfang'+suffix_2)))
+            (2, self.vol_m()*1, path.abspath(path_2+'Anfang'+suffix_2)))
         self.pushButton_23.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Geht'+suffix_2)))
+            (2, self.vol_m()*0.8, path.abspath(path_2+'Geht'+suffix_2)))
         self.pushButton_16.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Studieren'+suffix_2)))
+            (2, self.vol_m()*0.7, path.abspath(path_2+'Studieren'+suffix_2)))
         self.pushButton_34.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Machen'+suffix_2)))
+            (2, self.vol_m()*0.65, path.abspath(path_2+'Machen'+suffix_2)))
         self.pushButton_45.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Job'+suffix_2)))
+            (2, self.vol_m()*1, path.abspath(path_2+'Job'+suffix_2)))
         self.pushButton_46.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Charakter'+suffix_2)))
+            (2, self.vol_m()*0.75, path.abspath(path_2+'Charakter'+suffix_2)))
         self.pushButton_52.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Mehr'+suffix_2)))
+            (2, self.vol_u()*0.6, path.abspath(path_2+'Mehr'+suffix_2)))
         self.pushButton_49.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Spaß'+suffix_2)))
+            (2, self.vol_m()*1, path.abspath(path_2+'Spaß'+suffix_2)))
         self.pushButton_59.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Reicht'+suffix_2)))
+            (2, self.vol_u()*1, path.abspath(path_2+'Reicht'+suffix_2)))
         self.pushButton_54.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Sehrgut'+suffix_2)))
+            (2, self.vol_u()*1, path.abspath(path_2+'Sehrgut'+suffix_2)))
         self.pushButton_64.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Zurück'+suffix_2)))
+            (2, self.vol_m()*1, path.abspath(path_2+'Zurück'+suffix_2)))
         self.pushButton_78.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Frage wiederholen'+suffix_2)))
+            (2, self.vol_u()*0.9, path.abspath(path_2+'Frage wiederholen'+suffix_2)))
         self.pushButton_79.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Sind Sie noch da'+suffix_2)))
+            (2, self.vol_u()*1, path.abspath(path_2+'Sind Sie noch da'+suffix_2)))
         self.pushButton_81.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'mhm'+suffix_2)))
+            (2, self.vol_u()*0.3, path.abspath(path_2+'mhm'+suffix_2)))
         self.pushButton_58.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'mhm(zustimmend)'+suffix_2)))
+            (2, self.vol_u()*0.3, path.abspath(path_2+'mhm(zustimmend)'+suffix_2)))
         self.pushButton_85.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Oh wirklich'+suffix_2)))
+            (2, self.vol_u()*0.8, path.abspath(path_2+'Oh wirklich'+suffix_2)))
         self.pushButton_90.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Okay(zustimmend)'+suffix_2)))
+            (2, self.vol_u()*0.8, path.abspath(path_2+'Okay(zustimmend)'+suffix_2)))
         self.pushButton_87.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'mmmh(nachfragend)'+suffix_2)))
+            (2, self.vol_u()*0.45, path.abspath(path_2+'mmmh(nachfragend)'+suffix_2)))
         self.pushButton_36.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Damn'+suffix_2)))
+            (2, self.vol_u()*1, path.abspath(path_2+'Damn'+suffix_2)))
         self.pushButton_84.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Damn(kurz)'+suffix_2)))
+            (2, self.vol_u()*1, path.abspath(path_2+'Damn(kurz)'+suffix_2)))
         self.pushButton_39.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Kack'+suffix_2)))
+            (2, self.vol_u()*1, path.abspath(path_2+'Kack'+suffix_2)))
         self.pushButton_43.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'ou fuck'+suffix_2)))
+            (2, self.vol_u()*1, path.abspath(path_2+'ou fuck'+suffix_2)))
         self.pushButton_65.clicked.connect(lambda: self.player \
-            (2, path.abspath(path_2+'Uhm'+suffix_2)))
-		
+            (2, self.vol_u()*1, path.abspath(path_2+'Uhm'+suffix_2)))
+        
         #Person3
         path_3 = 'Person3_200-7000Hz_3rd-order\\'
         suffix_3 = '_200-7000Hz.wav'
         self.pushButton_22.clicked.connect(lambda: self.player \
-            (3, path.abspath(path_3+'Hallo'+suffix_3)))
+            (3, self.vol_m()*0.9, path.abspath(path_3+'Hallo'+suffix_3)))
         self.pushButton_50.clicked.connect(lambda: self.player \
-            (3, path.abspath(path_3+'Interessant'+suffix_3)))
+            (3, self.vol_m()*0.9, path.abspath(path_3+'Interessant'+suffix_3)))
         self.pushButton_37.clicked.connect(lambda: self.player \
-            (3, path.abspath(path_3+'Motivieren'+suffix_3)))
+            (3, self.vol_m()*0.65, path.abspath(path_3+'Motivieren'+suffix_3)))
         self.pushButton_41.clicked.connect(lambda: self.player \
-            (3, path.abspath(path_3+'Stärken'+suffix_3)))
+            (3, self.vol_m()*0.8, path.abspath(path_3+'Stärken'+suffix_3)))
         self.pushButton_57.clicked.connect(lambda: self.player \
-            (3, path.abspath(path_3+'Spannend'+suffix_3)))
+            (3, self.vol_m()*0.9, path.abspath(path_3+'Spannend'+suffix_3)))
     
-    def player(self,pl,file):
+    def player(self,pl,vol,file):
         """
         Plays the sound for the clicked button and sends the OSC-message. It 
         also can reset the color of the clicked button by hold the right mouse
         button and click the button.
         pl:     - chooses the player(1-3)
+        vol:    - volume of the playback
         file:   - the absolute file path
         """
         if QtWidgets.QApplication.mouseButtons() & QtCore.Qt.RightButton:
@@ -243,12 +252,18 @@ class Sampler(QtWidgets.QMainWindow):
             playABC = ['A','B','C'] 
             client.send_message(playABC[pl-1],len(data)/samplerate*1000)
             # play the sound
-            sd.play(data, samplerate, mapping=[ch[pl-1]])
+            sd.play(data*vol, samplerate, mapping=[ch[pl-1]])
 #            if pl == 1:
 #                sd1.start()
 #                sd1.write(np.float32(data))
             #sd.get_stream().active
     
+    def vol_m(self):
+        return  self.horizontalSlider_2.value()/100
+    
+    def vol_u(self):
+        return  self.horizontalSlider_1.value()/100#*\
+                #self.horizontalSlider_2.value()/100
     
     def colorRST(self):
         """
