@@ -88,28 +88,28 @@ class Sampler(QtWidgets.QMainWindow):
             client.send_message("Hangup",0))) # Hangup #
         
         #Volume sliders
-        self.label_3.setText(str(self.horizontalSlider_1.value()))
-        self.horizontalSlider_1.valueChanged.connect(lambda: self.label_3.\
-                setText(str(self.horizontalSlider_1.value())))
-        self.label_4.setText(str(self.horizontalSlider_2.value()))
-        self.horizontalSlider_2.valueChanged.connect(lambda: self.label_4.\
-                setText(str(self.horizontalSlider_2.value())))
+        self.slider_1.valueChanged.connect(lambda: self.label_3.\
+                setText(str(self.slider_1.value())))
+        self.slider_2.valueChanged.connect(lambda: self.label_4.\
+                setText(str(self.slider_2.value())))
+        self.slider_3.valueChanged.connect(lambda: self.label_7.\
+                setText(str(self.slider_3.value())))
         
         # Person1
         path_1 = 'Person1_200-7000Hz_3rd-order\\'
         suffix_1 = '_200-7000Hz.wav'
         self.pushButton_1.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*1, path.abspath(path_1+'Guten Tag'+suffix_1)))
+            (1, self.vol_d()*1, path.abspath(path_1+'Guten Tag'+suffix_1)))
         self.pushButton_2.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*0.8, path.abspath(path_1+'Sie haben uns wegen eines Praktikums'+suffix_1)))
+            (1, self.vol_d()*0.8, path.abspath(path_1+'Sie haben uns wegen eines Praktikums'+suffix_1)))
         self.pushButton_3.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*1, path.abspath(path_1+'Auf der Zweiten Leitung'+suffix_1)))
+            (1, self.vol_d()*1, path.abspath(path_1+'Auf der Zweiten Leitung'+suffix_1)))
         self.pushButton_13.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*1, path.abspath(path_1+'Und dann ist noch unser Projektleiter zugeschaltet'+suffix_1)))
+            (1, self.vol_d()*1, path.abspath(path_1+'Und dann ist noch unser Projektleiter zugeschaltet'+suffix_1)))
         self.pushButton_30.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*1, path.abspath(path_1+'Mehr erfahren'+suffix_1)))
+            (1, self.vol_d()*1, path.abspath(path_1+'Mehr erfahren'+suffix_1)))
         self.pushButton_19.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*0.8, path.abspath(path_1+'Oh warum denn nicht'+suffix_1)))
+            (1, self.vol_d()*0.8, path.abspath(path_1+'Oh warum denn nicht'+suffix_1)))
         self.pushButton_20.clicked.connect(lambda: self.player \
             (1, self.vol_u()*0.8, path.abspath(path_1+'Joar(gemütlich)'+suffix_1)))
         self.pushButton_21.clicked.connect(lambda: self.player \
@@ -137,47 +137,47 @@ class Sampler(QtWidgets.QMainWindow):
         self.pushButton_48.clicked.connect(lambda: self.player \
             (1, self.vol_u()*1, path.abspath(path_1+'Danke schön'+suffix_1)))
         self.pushButton_55.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*1, path.abspath(path_1+'Unterschied gut aussergewoehnlich'+suffix_1)))
+            (1, self.vol_d()*1, path.abspath(path_1+'Unterschied gut aussergewoehnlich'+suffix_1)))
         self.pushButton_32.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*0.85, path.abspath(path_1+'Angst'+suffix_1)))
+            (1, self.vol_d()*0.85, path.abspath(path_1+'Angst'+suffix_1)))
         self.pushButton_38.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*1, path.abspath(path_1+'Umziehen'+suffix_1)))
+            (1, self.vol_d()*1, path.abspath(path_1+'Umziehen'+suffix_1)))
         self.pushButton_35.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*1, path.abspath(path_1+'Freizeit'+suffix_1)))
+            (1, self.vol_d()*1, path.abspath(path_1+'Freizeit'+suffix_1)))
         self.pushButton_42.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*1, path.abspath(path_1+'Danke soweit'+suffix_1)))
+            (1, self.vol_d()*1, path.abspath(path_1+'Danke soweit'+suffix_1)))
         self.pushButton_63.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*1, path.abspath(path_1+'Danke gespraech'+suffix_1)))
+            (1, self.vol_d()*1, path.abspath(path_1+'Danke gespraech'+suffix_1)))
         self.pushButton_69.clicked.connect(lambda: self.player \
-            (1, self.vol_m()*1, path.abspath(path_1+'Aufwiederhoeren'+suffix_1)))
+            (1, self.vol_d()*1, path.abspath(path_1+'Aufwiederhoeren'+suffix_1)))
         
         # Person2
         path_2 = 'Person2_200-7000Hz_3rd-order\\'
         suffix_2 = '_200-7000Hz.wav'
         self.pushButton_11.clicked.connect(lambda: self.player \
-            (2, self.vol_m()*1, path.abspath(path_2+'Hallo'+suffix_2)))
+            (2, self.vol_d()*1, path.abspath(path_2+'Hallo'+suffix_2)))
         self.pushButton_27.clicked.connect(lambda: self.player \
-            (2, self.vol_m()*1, path.abspath(path_2+'Anfang'+suffix_2)))
+            (2, self.vol_d()*1, path.abspath(path_2+'Anfang'+suffix_2)))
         self.pushButton_23.clicked.connect(lambda: self.player \
-            (2, self.vol_m()*0.8, path.abspath(path_2+'Geht'+suffix_2)))
+            (2, self.vol_d()*0.8, path.abspath(path_2+'Geht'+suffix_2)))
         self.pushButton_16.clicked.connect(lambda: self.player \
-            (2, self.vol_m()*0.7, path.abspath(path_2+'Studieren'+suffix_2)))
+            (2, self.vol_d()*0.7, path.abspath(path_2+'Studieren'+suffix_2)))
         self.pushButton_34.clicked.connect(lambda: self.player \
-            (2, self.vol_m()*0.65, path.abspath(path_2+'Machen'+suffix_2)))
+            (2, self.vol_d()*0.65, path.abspath(path_2+'Machen'+suffix_2)))
         self.pushButton_45.clicked.connect(lambda: self.player \
-            (2, self.vol_m()*1, path.abspath(path_2+'Job'+suffix_2)))
+            (2, self.vol_d()*1, path.abspath(path_2+'Job'+suffix_2)))
         self.pushButton_46.clicked.connect(lambda: self.player \
-            (2, self.vol_m()*0.75, path.abspath(path_2+'Charakter'+suffix_2)))
+            (2, self.vol_d()*0.75, path.abspath(path_2+'Charakter'+suffix_2)))
         self.pushButton_52.clicked.connect(lambda: self.player \
             (2, self.vol_u()*0.6, path.abspath(path_2+'Mehr'+suffix_2)))
         self.pushButton_49.clicked.connect(lambda: self.player \
-            (2, self.vol_m()*1, path.abspath(path_2+'Spaß'+suffix_2)))
+            (2, self.vol_d()*1, path.abspath(path_2+'Spaß'+suffix_2)))
         self.pushButton_59.clicked.connect(lambda: self.player \
             (2, self.vol_u()*1, path.abspath(path_2+'Reicht'+suffix_2)))
         self.pushButton_54.clicked.connect(lambda: self.player \
             (2, self.vol_u()*1, path.abspath(path_2+'Sehrgut'+suffix_2)))
         self.pushButton_64.clicked.connect(lambda: self.player \
-            (2, self.vol_m()*1, path.abspath(path_2+'Zurück'+suffix_2)))
+            (2, self.vol_d()*1, path.abspath(path_2+'Zurück'+suffix_2)))
         self.pushButton_78.clicked.connect(lambda: self.player \
             (2, self.vol_u()*0.9, path.abspath(path_2+'Frage wiederholen'+suffix_2)))
         self.pushButton_79.clicked.connect(lambda: self.player \
@@ -207,15 +207,15 @@ class Sampler(QtWidgets.QMainWindow):
         path_3 = 'Person3_200-7000Hz_3rd-order\\'
         suffix_3 = '_200-7000Hz.wav'
         self.pushButton_22.clicked.connect(lambda: self.player \
-            (3, self.vol_m()*0.9, path.abspath(path_3+'Hallo'+suffix_3)))
+            (3, self.vol_d()*0.9, path.abspath(path_3+'Hallo'+suffix_3)))
         self.pushButton_50.clicked.connect(lambda: self.player \
-            (3, self.vol_m()*0.9, path.abspath(path_3+'Interessant'+suffix_3)))
+            (3, self.vol_d()*0.9, path.abspath(path_3+'Interessant'+suffix_3)))
         self.pushButton_37.clicked.connect(lambda: self.player \
-            (3, self.vol_m()*0.65, path.abspath(path_3+'Motivieren'+suffix_3)))
+            (3, self.vol_d()*0.65, path.abspath(path_3+'Motivieren'+suffix_3)))
         self.pushButton_41.clicked.connect(lambda: self.player \
-            (3, self.vol_m()*0.8, path.abspath(path_3+'Stärken'+suffix_3)))
+            (3, self.vol_d()*0.8, path.abspath(path_3+'Stärken'+suffix_3)))
         self.pushButton_57.clicked.connect(lambda: self.player \
-            (3, self.vol_m()*0.9, path.abspath(path_3+'Spannend'+suffix_3)))
+            (3, self.vol_d()*0.9, path.abspath(path_3+'Spannend'+suffix_3)))
     
     def player(self,pl,vol,file):
         """
@@ -258,21 +258,26 @@ class Sampler(QtWidgets.QMainWindow):
 #                sd1.write(np.float32(data))
             #sd.get_stream().active
     
-    def vol_m(self):
-        return  self.horizontalSlider_2.value()/100
+    def vol_d(self):
+        return  self.slider_3.value()/100*\
+                self.slider_2.value()/100
     
     def vol_u(self):
-        return  self.horizontalSlider_1.value()/100#*\
-                #self.horizontalSlider_2.value()/100
+        button_pressed = int(self.sender().objectName()[11:])
+        if getattr(self,'checkBox_'+str(button_pressed)).checkState():
+            return  self.slider_1.value()/100*\
+                    self.slider_2.value()/100
+        else:
+            return  self.slider_2.value()/100
     
     def colorRST(self):
         """
         To reset the colors of the buttons
         """
         P1 = [1,2,3,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
-                    38,35,42,63,69] #28,40
+                    38,35,42,63,69]
         P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87,36,\
-                    84,39,43,65] #44,51
+                    84,39,43,65]
         P3 = [22,50,37,41,57]
 #        for i in range(92,1,-1):
 #            getattr(self, 'pushButton_%d' %i).setStyleSheet\
