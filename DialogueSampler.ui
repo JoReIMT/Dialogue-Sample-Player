@@ -44,8 +44,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>918</width>
-         <height>1136</height>
+         <width>936</width>
+         <height>922</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
@@ -690,8 +690,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>991</width>
-         <height>225</height>
+         <width>997</width>
+         <height>186</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_8">
@@ -743,7 +743,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>Oh wirklich</string>
+           <string>Oh wirklich?</string>
           </property>
          </widget>
         </item>
@@ -1432,6 +1432,23 @@
           </property>
          </widget>
         </item>
+        <item row="5" column="7">
+         <widget class="QPushButton" name="pushButton_91">
+          <property name="text">
+           <string>Dazu kommen wir später.</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="6">
+         <widget class="QCheckBox" name="checkBox_91">
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
      </widget>
@@ -1444,7 +1461,7 @@
      <x>0</x>
      <y>0</y>
      <width>1017</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

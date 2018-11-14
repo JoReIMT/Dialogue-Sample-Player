@@ -150,6 +150,8 @@ class Sampler(QtWidgets.QMainWindow):
             (1, self.vol_d()*1, path.abspath(path_1+'Danke gespraech'+suffix_1)))
         self.pushButton_69.clicked.connect(lambda: self.player \
             (1, self.vol_d()*1, path.abspath(path_1+'Aufwiederhoeren'+suffix_1)))
+        self.pushButton_91.clicked.connect(lambda: self.player \
+            (1, self.vol_u()*1, path.abspath(path_1+'Später'+suffix_1)))
         
         # Person2
         path_2 = 'Person2_200-7000Hz_3rd-order\\'
@@ -228,7 +230,7 @@ class Sampler(QtWidgets.QMainWindow):
         """
         if QtWidgets.QApplication.mouseButtons() & QtCore.Qt.RightButton:
             P1 = [1,2,3,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
-                    38,35,42,63,69] #28,40
+                    38,35,42,63,69,91] #28,40
             P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87,36,\
                     84,39,43,65] #44,51
             P3 = [22,50,37,41,57]
@@ -275,7 +277,7 @@ class Sampler(QtWidgets.QMainWindow):
         To reset the colors of the buttons
         """
         P1 = [1,2,3,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
-                    38,35,42,63,69]
+                    38,35,42,63,69,91]
         P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87,36,\
                     84,39,43,65]
         P3 = [22,50,37,41,57]
