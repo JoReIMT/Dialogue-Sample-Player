@@ -18,7 +18,7 @@ user clicked the stop, ring, hangup or reset button.
 Prerequisites:
 ------------
 1. Install Python (version 3.6 or later): https://www.python.org/downloads/
-2. Run setup.bat (installs sounddevice, soundfile, PyQT5, python-osc)
+2. Run setup.bat (installs numpy, sounddevice, soundfile, PyQT5, python-osc)
 
 Quick start (for Windows):
 ------------
