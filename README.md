@@ -17,6 +17,8 @@ button hold the right mouse key and left click the button you want.
 Further the player sends OSC commands when a player starts playing and when the 
 user clicked the stop, ring, hangup or reset button.
 
+The player supports touch input. Therfore the Scrollbar was removed. You can scroll by swipe the finger or hold the mouse and swipe it or with the scroll weel or with the arrow keys in the selcted scroll area.
+
 Prerequisites:
 ------------
 1. Install Python (version 3.6 or later): https://www.python.org/downloads/
