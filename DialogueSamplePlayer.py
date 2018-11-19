@@ -103,6 +103,8 @@ class Sampler(QtWidgets.QMainWindow):
             (1, self.vol_d()*0.8, path.abspath(path_1+'Sie haben uns wegen eines Praktikums'+suffix_1)))
         self.pushButton_3.clicked.connect(lambda: self.player \
             (1, self.vol_d()*1, path.abspath(path_1+'Auf der Zweiten Leitung'+suffix_1)))
+        self.pushButton_4.clicked.connect(lambda: self.player \
+            (1, self.vol_d()*1, path.abspath(path_1+'Was Beruf'+suffix_1)))
         self.pushButton_13.clicked.connect(lambda: self.player \
             (1, self.vol_d()*1, path.abspath(path_1+'Und dann ist noch unser Projektleiter zugeschaltet'+suffix_1)))
         self.pushButton_30.clicked.connect(lambda: self.player \
@@ -228,7 +230,7 @@ class Sampler(QtWidgets.QMainWindow):
         file:   - the absolute file path
         """
         if QtWidgets.QApplication.mouseButtons() & QtCore.Qt.RightButton:
-            P1 = [1,2,3,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
+            P1 = [1,2,3,4,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
                     38,35,42,63,69,91]
             P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87,36,\
                     84,39,43,65]
@@ -271,7 +273,7 @@ class Sampler(QtWidgets.QMainWindow):
         """
         To reset the colors of the buttons
         """
-        P1 = [1,2,3,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
+        P1 = [1,2,3,4,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
                     38,35,42,63,69,91]
         P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87,36,\
                     84,39,43,65]
