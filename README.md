@@ -4,9 +4,11 @@ What is DialogueSamplePlayer:
 -----------------------------
 
 This is a player desinged to play samples for a dialogue of three persons.
-Therfore the buttons are ordered in an table with three columns. Each of the 
-columns represents one person. For each person the player chooses one output 
+Therfore the buttons are ordered in an table with three columns and three colors. Each of the 
+columns and colors represents one person. For each person the player chooses one output 
 channel.
+
+In addition there is an uttering section at the top. Maybe you need these buttons to make the dialogue more immersive.
 
 The Dialogue Sample Player markes the played samples with bluish green color.
 To reset the color of all buttons press 'Reset' or if you just want to reset one
