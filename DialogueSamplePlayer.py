@@ -19,7 +19,6 @@
 import sys
 from os import path,system
 import argparse
-#import numpy as np
 import sounddevice as sd                # MIT
 import soundfile as sf                  # BSD 3-Clause
 from PyQt5 import QtWidgets, QtCore     # GPLv3 <http://www.gnu.org/licenses/>
@@ -69,8 +68,8 @@ class Sampler(QtWidgets.QMainWindow):
         loadUi(path.abspath('DialogueSampler.ui'),self)
         self.setWindowTitle('Dialogue Sample Player')
         self.colorRST()
-        #self.frame.setStyleSheet("background-color: white")
         self.ButtonActions()
+        QtWidgets.QScroller.grabGesture(self.scrollArea, QtWidgets.QScroller.LeftMouseButtonGesture)
 
     def ButtonActions(self):
         """
@@ -230,9 +229,9 @@ class Sampler(QtWidgets.QMainWindow):
         """
         if QtWidgets.QApplication.mouseButtons() & QtCore.Qt.RightButton:
             P1 = [1,2,3,13,30,19,20,21,18,24,31,33,80,40,28,83,86,56,48,55,32,\
-                    38,35,42,63,69,91] #28,40
+                    38,35,42,63,69,91]
             P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87,36,\
-                    84,39,43,65] #44,51
+                    84,39,43,65]
             P3 = [22,50,37,41,57]
             # reset the color
             bgc = ['rgb(210,190,255)','rgb(170,255,255)','rgb(255,255,150)','rgb(220,220,220)']
@@ -255,10 +254,6 @@ class Sampler(QtWidgets.QMainWindow):
             client.send_message(playABC[pl-1],len(data)/samplerate*1000)
             # play the sound
             sd.play(data*vol, samplerate, mapping=[ch[pl-1]])
-#            if pl == 1:
-#                sd1.start()
-#                sd1.write(np.float32(data))
-            #sd.get_stream().active
     
     def vol_d(self):
         return  self.slider_3.value()/100*\
@@ -281,9 +276,7 @@ class Sampler(QtWidgets.QMainWindow):
         P2 = [11,27,23,16,34,45,46,52,49,59,54,64,78,79,81,58,85,90,87,36,\
                     84,39,43,65]
         P3 = [22,50,37,41,57]
-#        for i in range(92,1,-1):
-#            getattr(self, 'pushButton_%d' %i).setStyleSheet\
-#                                     ("background-color: rgb(220,220,220)")
+        
         for i in P1:
             getattr(self, 'pushButton_%d' %i).setStyleSheet\
                                      ("background-color: rgb(210,190,255)")
@@ -389,28 +382,9 @@ def run():
     
     # set sounddevice
     sd.default.device = dialog.comboBox.currentText() #'ASIO Hammerfall DSP'
-#    asio_out = sd.AsioSettings(channel_selectors=[0,1,2])
-#    sd.default.extra_settings = asio_out
     global ch
     ch = [int(dialog.comboBox_4.currentText()),int(dialog.comboBox_3.currentText()), \
         int(dialog.comboBox_2.currentText())]
-    
-    # initalize sounddevice streams
-#    global sd1,sd2,sd3
-#    data, samplerate = sf.read(path.abspath('stille.wav'))
-#    asio_out = sd.AsioSettings(channel_selectors=[0,1,2])
-#    sd.play(data, samplerate, extra_settings=asio_out)
-#    sd.OutputStream(device = sd.default.device,extra_settings=asio_out, channels=1).start()
-#    sd1 = sd.get_stream()
-#    outdata[:,1] = np.float32(data)
-#    sd.OutputStream(extra_settings=asio_out, channels=1).write(outdata)
-#    
-#    asio_out = sd.AsioSettings(channel_selectors=[1])
-#    sd.play(data, samplerate, extra_settings=asio_out)
-#    sd2 = sd.get_stream()
-#    asio_out = sd.AsioSettings(channel_selectors=[2])
-#    sd.play(data, samplerate, extra_settings=asio_out)
-#    sd3 = sd.get_stream()
     
     # start sampler UI
     widget = Sampler()
