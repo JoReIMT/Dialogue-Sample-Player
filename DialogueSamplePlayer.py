@@ -69,9 +69,7 @@ class Sampler(QtWidgets.QMainWindow):
         self.setWindowTitle('Dialogue Sample Player')
         self.colorRST()
         self.ButtonActions()
-        QtWidgets.QScroller.grabGesture(self.scrollArea, QtWidgets.QScroller.LeftMouseButtonGesture)
-        QtWidgets.QScroller.grabGesture(self.scrollArea_2, QtWidgets.QScroller.LeftMouseButtonGesture)
-
+        self.makeTouch()
         
     def ButtonActions(self):
         """
@@ -288,6 +286,15 @@ class Sampler(QtWidgets.QMainWindow):
         for i in P3:
             getattr(self, 'pushButton_%d' %i).setStyleSheet\
                                      ("background-color: rgb(255,255,150)")
+    
+    def makeTouch(self):
+        self.scrollArea.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.scrollArea.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.scrollArea_2.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.scrollArea_2.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        QtWidgets.QScroller.grabGesture(self.scrollArea, QtWidgets.QScroller.LeftMouseButtonGesture)
+        QtWidgets.QScroller.grabGesture(self.scrollArea_2, QtWidgets.QScroller.LeftMouseButtonGesture)
+
 
 
 class SoundDev(QtWidgets.QDialog):
