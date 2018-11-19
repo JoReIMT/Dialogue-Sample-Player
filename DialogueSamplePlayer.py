@@ -70,7 +70,9 @@ class Sampler(QtWidgets.QMainWindow):
         self.colorRST()
         self.ButtonActions()
         QtWidgets.QScroller.grabGesture(self.scrollArea, QtWidgets.QScroller.LeftMouseButtonGesture)
+        QtWidgets.QScroller.grabGesture(self.scrollArea_2, QtWidgets.QScroller.LeftMouseButtonGesture)
 
+        
     def ButtonActions(self):
         """
         Specifies the action that are performed when a button is clicked.
